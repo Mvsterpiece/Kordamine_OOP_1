@@ -10,7 +10,9 @@ namespace Kordamine_OOP_1
     {
         public string nimi;
         public string varv;
-        public char sugu;
+        //public char sugu;
+        public enum sugu { isane,emane}
+        public sugu loomaSugu;
         public double kaal;
         public int vanus;
         public bool elav; //kui true, siis elav, kui fasle, siis on surnud.
@@ -24,7 +26,8 @@ namespace Kordamine_OOP_1
         {
             this.nimi = nimi;
             this.varv = varv;
-            this.sugu = sugu;
+            //this.sugu = sugu;
+            this.loomaSugu = loomaSugu;
             this.kaal = kaal;
             this.vanus = vanus;
             this.elav = elav;
@@ -33,7 +36,8 @@ namespace Kordamine_OOP_1
         {
             this.nimi = loom.nimi;
             this.varv = loom.varv;
-            this.sugu = loom.sugu;
+            //this.sugu = loom.sugu;
+            this.loomaSugu=loom.loomaSugu;
             this.kaal = loom.kaal;
             this.vanus = loom.vanus;
             this.elav = loom.elav;
