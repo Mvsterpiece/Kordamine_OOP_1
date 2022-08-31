@@ -17,16 +17,6 @@ namespace Kordamine_OOP_1
 
         public override void print_Info()
         {
-            string sugu_text = "";
-                if (sugu == 'I')
-                {
-                    sugu_text = "Isane";
-                }
-                else if (sugu == 'E')
-                {
-                    sugu_text = "Emane";
-                }
-
                 string elav_text = "";
                 if (elav == true)
                 {
@@ -36,7 +26,7 @@ namespace Kordamine_OOP_1
                 {
                     elav_text = "Surnud";
                 }
-            Console.WriteLine("{0} {1} {2} ta on {3} ja tema kaal on {4} ja ta on {5} aastat vana",toug, elav_text, varv, nimi, sugu_text, kaal, vanus);
+            Console.WriteLine("{0} {1} {2} ta on {3} ja tema kaal on {4} ja ta on {5} aastat vana", elav_text,toug ,nimi, varv, kaal, loomaSugu, vanus);
         }
     }
 }
