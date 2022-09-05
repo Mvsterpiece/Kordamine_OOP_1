@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kordamine_OOP_1
 {
-    internal class Tootaja
+    internal class Tootaja : Isik
     {
         public string asutus;
         public string amet;
@@ -18,8 +18,6 @@ namespace Kordamine_OOP_1
             this.amet = amet;
             this.tootasu = tootasu;
         }
-
-
 
 
         public override double arvutaSissetulek(double maksuvaba, double tulumaks)

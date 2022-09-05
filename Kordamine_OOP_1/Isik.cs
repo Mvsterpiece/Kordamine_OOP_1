@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kordamine_OOP_1
 {
-    public class Isik
+    public abstract class Isik
     {
         public string nimi;
         public int synniAasta;
@@ -46,10 +46,7 @@ namespace Kordamine_OOP_1
             nimi = uusNimi;
         }
 
-        public abstract void arvutaSissetulek()
-        {
-
-        }
+        public abstract double arvutaSissetulek(double palk, double tulumaks, double maksuvaba);
 
 
     }
