@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Kordamine_OOP_1
 {
-    internal class Tootaja : Isik
+    class Tootaja : Isik
     {
         public string asutus;
         public enum amet { Manager, Designer, Programmer }
         public amet Inimamet;
         public string tootasu;
 
-        public Tootaja(string asutus, amet Inimamet, string tootasu, string nimi, int synniaasta, sugu Inimsugu, double maksuvaba, double palk) : base(nimi, synniaasta, Inimsugu, maksuvaba, palk)
+        public Tootaja(string asutus, amet Inimamet, string tootasu, string nimi, int synniaasta, sugu Inimsugu, double maksuvaba, double palk) : base(nimi, synniaasta, Inimsugu)
         {
             this.asutus = asutus;
             this.Inimamet = Inimamet;
             this.tootasu = tootasu;
         }
 
-        public override double arvutaSissetulek(double tulumaks, double maksuvaba, double palk)
+        public override double arvutaSissetulek()
         {
             double netopalk = ((palk - maksuvaba) * (1 - (tulumaks / 100))) + maksuvaba;
             return netopalk;

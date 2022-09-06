@@ -10,13 +10,11 @@ namespace Kordamine_OOP_1
     {
         public string nimi;
         public int synniAasta;
-        public int uusnimi;
         public enum sugu { isane, emane }
         public sugu Inimsugu;
         public double palk;
         public double maksuvaba;
         public double tulumaks;
-        private Kutsekooliopilane.eriala inimsugu;
 
         public Isik(string nimi)
         {
@@ -45,7 +43,12 @@ namespace Kordamine_OOP_1
             nimi = uusNimi;
         }
 
-        public abstract double arvutaSissetulek(double palk, double tulumaks, double maksuvaba);
+        public abstract double arvutaSissetulek();
+
+
+
+
+
 
 
     }

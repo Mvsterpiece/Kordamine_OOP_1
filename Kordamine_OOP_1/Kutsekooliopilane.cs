@@ -6,33 +6,59 @@ using System.Threading.Tasks;
 
 namespace Kordamine_OOP_1
 {
-    internal class Kutsekooliopilane : Isik
+    class Kutsekooliopilane : Isik
     {
         public string oppeasutus;
         public enum eriala { Welder, WebProgrammer, Architector }
         public eriala Inimeriala;
         public string kursus;
         public int toetus;
+        public string elamiskoht;
+        public int lastearv;
+        public double perepalk;
+        public double keskhinne;
+        public double toetussumma;
 
-        public Kutsekooliopilane(string oppeasutus, eriala Inimeriala, string kursus, int toetus, string nimi, int synniaasta, eriala Inimsugu, double maksuvaba, double palk) : base(nimi, synniaasta, Inimsugu, maksuvaba, palk)
+        double soidetoetus = 0;
+        double pohitoetus = 0;
+        double eritoetus = 0;
+        double tulek;
+
+        public Kutsekooliopilane(double toetussumma, string elamiskoht, double perepalk, int lastearv, double keskhinne, string oppeasutus, string eriala, string kursus, string nimi, int synniaasta, sugu Inimsugu, double maksuvaba, double palk, double tulumaks) : base(nimi, synniaasta, Inimsugu, maksuvaba, palk, tulumaks)
         {
             this.oppeasutus = oppeasutus;
             this.Inimeriala = Inimeriala;
             this.kursus = kursus;
             this.toetus = toetus;
+            this.lastearv = lastearv;
+            this.perepalk = perepalk;
+            this.keskhinne = keskhinne;
+            this.toetussumma = toetussumma;
+
         }
 
-
-
-
-
-        public override double arvutaSissetulek(double maksuvaba, double tulumaks, double palk)
+        public string Toetus()
         {
-            double netopalk = ((palk - maksuvaba) * (1 - (tulumaks / 100))) + maksuvaba;
-            return netopalk;
+            if (elamiskoht != "Tallinn")
+            {
+                soidetoetus = 50;
+            }
+            if (perepalk <= 300 || lastearv > 2)
+            {
+                eritoetus = 90;
+            }
+            if (keskhinne >= 3.3)
+            {
+                pohitoetus = 60;
+            }
+            string toetus = $"sõidetoetus {soidetoetus}, eritoetus {eritoetus}, põhitoetus {pohitoetus}";
+            return toetus;
         }
-
-
+        public override double arvutaSissetulek()
+        {
+            tulek = toetussumma + soidetoetus + eritoetus + pohitoetus;
+            return tulek;
+        }
 
 
 
@@ -41,7 +67,7 @@ namespace Kordamine_OOP_1
 
         public override void printInfo()
         {
-            Console.WriteLine("Sinu õppeasutus on {0}, eriala {1}, kursus {2} ja toetus {3}", oppeasutus, Inimeriala, kursus, toetus);
+            Console.WriteLine("Sinu toetus on {0} õppeasutus on {1}, eriala {2}, kursus {3} ja tootasu {4}", toetus, oppeasutus, Inimeriala, kursus);
         }
 
 
