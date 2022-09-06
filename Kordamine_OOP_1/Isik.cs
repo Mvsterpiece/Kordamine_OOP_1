@@ -10,28 +10,27 @@ namespace Kordamine_OOP_1
     {
         public string nimi;
         public int synniAasta;
-        public int vanus;
         public int uusnimi;
-        public enum Sugu { isane, emane }
-        public Sugu sugu;
+        public enum sugu { isane, emane }
+        public sugu Inimsugu;
+        public double palk;
+        public double maksuvaba;
+        public double tulumaks;
+        private Kutsekooliopilane.eriala inimsugu;
 
-
-        public Isik()
+        public Isik(string nimi)
         {
             
         }
 
-        public Isik(string nimi, int synniAasta, string inimsugu, Sugu sugu)
+        public Isik(string nimi, int synniAasta, sugu Inimsugu)
         {
             this.nimi = nimi;
             this.synniAasta = synniAasta;
-            this.sugu = sugu;
+            this.Inimsugu = Inimsugu;
         }
 
-        public void printInfo()
-        {
-            Console.WriteLine("Sinu nimi on {0}, sa oled sundinud {1} ja sinu sugo on {2}",nimi, synniAasta, sugu);
-        }
+        public abstract void printInfo();
 
         public int arvutaVanus()
         {

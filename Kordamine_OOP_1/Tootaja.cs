@@ -9,22 +9,30 @@ namespace Kordamine_OOP_1
     internal class Tootaja : Isik
     {
         public string asutus;
-        public string amet;
+        public enum amet { Manager, Designer, Programmer }
+        public amet Inimamet;
         public string tootasu;
 
-        public Tootaja(string asutus, string amet, string tootasu)
+        public Tootaja(string asutus, amet Inimamet, string tootasu, string nimi, int synniaasta, sugu Inimsugu, double maksuvaba, double palk) : base(nimi, synniaasta, Inimsugu, maksuvaba, palk)
         {
             this.asutus = asutus;
-            this.amet = amet;
+            this.Inimamet = Inimamet;
             this.tootasu = tootasu;
         }
 
-
-        public override double arvutaSissetulek(double maksuvaba, double tulumaks)
+        public override double arvutaSissetulek(double tulumaks, double maksuvaba, double palk)
         {
-            double clearPalk = ((tootasu - maksuvaba) * (1 - (tulumaks / 100))) + maksuvaba;
-            return clearPalk;
+            double netopalk = ((palk - maksuvaba) * (1 - (tulumaks / 100))) + maksuvaba;
+            return netopalk;
         }
+
+        public override void printInfo()
+        {
+            Console.WriteLine("Sinu asutus on {0} ja amet {1} ja töötasu {2}", asutus, Inimamet, tootasu);
+        }
+
+
+
 
     }
 }

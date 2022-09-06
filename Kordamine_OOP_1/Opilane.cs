@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace Kordamine_OOP_1
         public string klass;
         public string spetsialiseerumine;
 
-        public Opilane(string koolinimi, string klass, string spetsialiseerumine, string nimi, int synniaasta, Sugu isikSugu, double maksuvaba, double palk) : base(nimi, synniaasta, isikSugu, maksuvaba, palk)
+        public Opilane(string koolinimi, string klass, string spetsialiseerumine, string nimi, int synniaasta, sugu InimSugu, double maksuvaba, double palk) : base(nimi, synniaasta, InimSugu, maksuvaba, palk)
         {
             this.koolinimi = koolinimi;
             this.klass = klass;
@@ -24,5 +25,11 @@ namespace Kordamine_OOP_1
             return netopalk;
         }
 
+        public override void printInfo()
+        {
+            Console.WriteLine("Sinu nimi on {0} ja klass {1} ja eriala {2}",koolinimi ,klass, spetsialiseerumine);
+        }
+
+
     }
-}
+}   
