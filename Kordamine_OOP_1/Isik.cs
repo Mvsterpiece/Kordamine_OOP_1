@@ -16,7 +16,7 @@ namespace Kordamine_OOP_1
         public double maksuvaba;
         public double tulumaks;
 
-        public Isik(string nimi)
+        public Isik()
         {
             
         }
