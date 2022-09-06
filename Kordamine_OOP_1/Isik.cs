@@ -45,11 +45,5 @@ namespace Kordamine_OOP_1
 
         public abstract double arvutaSissetulek();
 
-
-
-
-
-
-
     }
 }
