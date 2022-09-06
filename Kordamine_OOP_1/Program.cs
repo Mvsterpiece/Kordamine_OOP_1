@@ -36,3 +36,9 @@ StreamReader from_file = new StreamReader(@"C:\Users\opilane\source\repos\Saiko_
 string text = from_file.ReadToEnd();
 Console.WriteLine(text);
 from_file.Close();
+
+List<Isik> LoetudFailist = new List<Isik>();
+StreamReader sr = new StreamReader(@"C:\Users\opilane\source\repos\Saiko_TARpv21\Kordamine_OOP_1\People.txt");
+List<string> lines = new List<string>();
+int n = sr.ReadToEnd().Split(new char[] { '\n' }).Length;
+Console.WriteLine("-----"+n+ "-----");
