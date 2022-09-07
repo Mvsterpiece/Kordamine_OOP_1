@@ -24,7 +24,7 @@ namespace Kordamine_OOP_1
         double eritoetus = 0;
         double tulek;
 
-        public Kutsekooliopilane(double toetussumma, string elamiskoht, double perepalk, int lastearv, double keskhinne, string oppeasutus, string eriala, string kursus, string nimi, int synniaasta, sugu Inimsugu, double maksuvaba, double palk, double tulumaks) : base(nimi, synniaasta, Inimsugu, maksuvaba, palk, tulumaks)
+        public Kutsekooliopilane(double toetussumma, string elamiskoht, double perepalk, int lastearv, double keskhinne, string oppeasutus, string eriala, string kursus, string nimi, int synniaasta, sugu Inimsugu, double maksuvaba, double palk, double tulumaks, eriala Inimeriala) : base(nimi, synniaasta, Inimsugu)
         {
             this.oppeasutus = oppeasutus;
             this.Inimeriala = Inimeriala;
@@ -63,9 +63,8 @@ namespace Kordamine_OOP_1
 
         public override void printInfo()
         {
-            Console.WriteLine("Sinu toetus on {0} õppeasutus on {1}, eriala {2}, kursus {3} ja tootasu {4}", toetus, oppeasutus, Inimeriala, kursus);
+            Console.WriteLine("Sinu toetus on {0} õppeasutus on {1}, eriala {2}, kursus {3} ja tootasu {4}.", toetus, oppeasutus, Inimeriala, kursus);
         }
-
 
     }
 }

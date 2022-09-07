@@ -13,7 +13,7 @@ List<Isik> people = new List<Isik>();
 Tootaja tootaja = new Tootaja("TTHK", Tootaja.amet.Manager, "TTHK", "Evgeniy", 1990, Isik.sugu.isane, 500, 2300);
 tootaja.printInfo();
 tootaja.arvutaVanus();
-Kutsekooliopilane Kopilane = new Kutsekooliopilane(60,"Tallinn", 450, 3, 4.5, "THK", "tarkvara arendaja", "MEHpv22", "Luda", 2004, Isik.sugu.emane, 0, 0, 0);
+Kutsekooliopilane Kopilane = new Kutsekooliopilane(60,"Tallinn", 450, 3, 4.5, "THK", "tarkvara arendaja", "MEHpv22", "Luda", 2004, Isik.sugu.emane, 0, 0, 0,Kutsekooliopilane.eriala.Welder);
 Kopilane.printInfo();
 Kopilane.arvutaVanus();
 
@@ -41,4 +41,33 @@ List<Isik> LoetudFailist = new List<Isik>();
 StreamReader sr = new StreamReader(@"C:\Users\opilane\source\repos\Saiko_TARpv21\Kordamine_OOP_1\People.txt");
 List<string> lines = new List<string>();
 int n = sr.ReadToEnd().Split(new char[] { '\n' }).Length;
-Console.WriteLine("-----"+n+ "-----");
+Console.WriteLine("-----"+n+"-----");
+
+
+List<Tootaja> tootajad = new List<Tootaja>();
+StreamReader sr = new StreamReader(@"C:\Users\opilane\source\repos\Saiko_TARpv21\Kordamine_OOP_1\People.txt");
+string text;
+while ((text = sr.ReadLine()) != null)
+{
+    string[] rida = text.Split(',');
+    tootajad.Add(new Tootaja(rida[0], Int32.Parse(rida[1]), TextFailistEnumSugu(rida[2])));
+}
+sr.Close();
+foreach (var tootaja in tootajad)
+{
+    Console.WriteLine(tootaja.nimi + " " + tootaja.Inimsugu);
+}
+Console.ReadLine();
+Isik.sugu TextFailistEnumSugu(string andmed)
+{
+    switch (andmed)
+    {
+        case "emane":
+            return Isik.sugu.emane;
+        default:
+            return Isik.sugu.isane;
+    }
+}
+
+
+
