@@ -10,7 +10,7 @@ namespace Kordamine_OOP_1
     {
         public string nimi;
         public int synniAasta;
-        public enum sugu { isane, emane }
+        public enum sugu { mees, naine }
         public sugu Inimsugu;
         public double palk;
         public double maksuvaba;

@@ -9,7 +9,7 @@ namespace Kordamine_OOP_1
     class Kutsekooliopilane : Isik
     {
         public string oppeasutus;
-        public enum eriala { Welder, WebProgrammer, Architector }
+        public enum eriala { Welder, WebProgrammer }
         public eriala Inimeriala;
         public string kursus;
         public int toetus;

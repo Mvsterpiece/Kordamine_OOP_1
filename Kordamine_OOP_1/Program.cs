@@ -10,9 +10,9 @@ List<Isik> people = new List<Isik>();
 
 
 
-Tootaja tootaja = new Tootaja("TTHK", Tootaja.amet.Manager, "TTHK", "Evgeniy", 1990, Isik.sugu.isane, 500, 2300);
-tootaja.printInfo();
-tootaja.arvutaVanus();
+Tootaja tootaja1 = new Tootaja("TTHK", Tootaja.amet.Manager, "TTHK", "Evgeniy", 1990, Isik.sugu.isane, 500, 2300);
+tootaja1.printInfo();
+tootaja1.arvutaVanus();
 Kutsekooliopilane Kopilane = new Kutsekooliopilane(60,"Tallinn", 450, 3, 4.5, "THK", "tarkvara arendaja", "MEHpv22", "Luda", 2004, Isik.sugu.emane, 0, 0, 0,Kutsekooliopilane.eriala.Welder);
 Kopilane.printInfo();
 Kopilane.arvutaVanus();
@@ -21,7 +21,7 @@ Kopilane.arvutaVanus();
 
 
 
-people.Add(tootaja);
+people.Add(tootaja1);
 people.Add(Kopilane);
 
 
@@ -33,8 +33,8 @@ foreach (Isik p in people)
 }
 to_file.Close();
 StreamReader from_file = new StreamReader(@"C:\Users\opilane\source\repos\Saiko_TARpv21\Kordamine_OOP_1\People.txt");
-string text = from_file.ReadToEnd();
-Console.WriteLine(text);
+string text1 = from_file.ReadToEnd();
+Console.WriteLine(text1);
 from_file.Close();
 
 List<Isik> LoetudFailist = new List<Isik>();
@@ -42,15 +42,15 @@ StreamReader sr = new StreamReader(@"C:\Users\opilane\source\repos\Saiko_TARpv21
 List<string> lines = new List<string>();
 int n = sr.ReadToEnd().Split(new char[] { '\n' }).Length;
 Console.WriteLine("-----"+n+"-----");
-
+sr.Close();
 
 List<Tootaja> tootajad = new List<Tootaja>();
-StreamReader sr = new StreamReader(@"C:\Users\opilane\source\repos\Saiko_TARpv21\Kordamine_OOP_1\People.txt");
+sr = new StreamReader(@"C:\Users\opilane\source\repos\Saiko_TARpv21\Kordamine_OOP_1\People.txt");
 string text;
 while ((text = sr.ReadLine()) != null)
 {
     string[] rida = text.Split(',');
-    tootajad.Add(new Tootaja(rida[0], Int32.Parse(rida[1]), TextFailistEnumSugu(rida[2])));
+    tootajad.Add(new Tootaja(rida[0], TextFailistAmet(rida[1]), rida[2], rida[3], int.Parse(rida[4]), TextFailistEnumSugu(rida[5]), double.Parse(rida[6]), double.Parse(rida[7]);
 }
 sr.Close();
 foreach (var tootaja in tootajad)
@@ -62,10 +62,22 @@ Isik.sugu TextFailistEnumSugu(string andmed)
 {
     switch (andmed)
     {
-        case "emane":
-            return Isik.sugu.emane;
+        case "naine":
+            return Isik.sugu.naine;
         default:
-            return Isik.sugu.isane;
+            return Isik.sugu.mees;
+    }
+}
+
+Console.ReadLine();
+Tootaja.amet TextFailistAmet(string andmed)
+{
+    switch (andmed)
+    {
+        case "Manager":
+            return Tootaja.amet.Manager;
+        default:
+            return Tootaja.amet.Designer;
     }
 }
 

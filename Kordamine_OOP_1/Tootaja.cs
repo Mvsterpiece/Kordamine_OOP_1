@@ -9,7 +9,7 @@ namespace Kordamine_OOP_1
     class Tootaja : Isik
     {
         public string asutus;
-        public enum amet { Manager, Designer, Programmer }
+        public enum amet { Manager, Designer }
         public amet Inimamet;
         public string tootasu;
 
