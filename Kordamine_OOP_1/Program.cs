@@ -10,10 +10,10 @@ List<Isik> people = new List<Isik>();
 
 
 
-Tootaja tootaja1 = new Tootaja("TTHK", Tootaja.amet.Manager, "TTHK", "Evgeniy", 1990, Isik.sugu.isane, 500, 2300);
+Tootaja tootaja1 = new Tootaja("TTHK", Tootaja.amet.Manager, "TTHK", "Evgeniy", 1990, Isik.sugu.mees, 500, 2300);
 tootaja1.printInfo();
 tootaja1.arvutaVanus();
-Kutsekooliopilane Kopilane = new Kutsekooliopilane(60,"Tallinn", 450, 3, 4.5, "THK", "tarkvara arendaja", "MEHpv22", "Luda", 2004, Isik.sugu.emane, 0, 0, 0,Kutsekooliopilane.eriala.Welder);
+Kutsekooliopilane Kopilane = new Kutsekooliopilane(60,"Tallinn", 450, 3, 4.5, "THK", "tarkvara arendaja", "MEHpv22", "Luda", 2004, Isik.sugu.naine, 0, 0, 0,Kutsekooliopilane.eriala.Welder);
 Kopilane.printInfo();
 Kopilane.arvutaVanus();
 
@@ -50,7 +50,7 @@ string text;
 while ((text = sr.ReadLine()) != null)
 {
     string[] rida = text.Split(',');
-    tootajad.Add(new Tootaja(rida[0], TextFailistAmet(rida[1]), rida[2], rida[3], int.Parse(rida[4]), TextFailistEnumSugu(rida[5]), double.Parse(rida[6]), double.Parse(rida[7]);
+    tootajad.Add(new Tootaja(rida[0], TextFailistAmet(rida[1]), rida[2], rida[3], int.Parse(rida[4]), TextFailistEnumSugu(rida[5]), double.Parse(rida[6]), double.Parse(rida[7])));
 }
 sr.Close();
 foreach (var tootaja in tootajad)
