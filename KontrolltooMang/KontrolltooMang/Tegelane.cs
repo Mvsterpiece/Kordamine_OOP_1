@@ -8,7 +8,7 @@ namespace KontrolltooMang
 {
     abstract class Tegelane : IUksus //наследует от IUksus
     {
-        List<Ese> eses;
+        List<Ese> ;
 
 
         string nimi;
