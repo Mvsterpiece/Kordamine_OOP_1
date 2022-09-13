@@ -8,5 +8,9 @@ namespace KontrolltooMang
 {
     internal class Mang
     {
+
+
+
+
     }
 }

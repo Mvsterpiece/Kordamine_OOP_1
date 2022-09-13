@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace KontrolltooMang
 {
-    abstract class Ese : IUksus //наследует от IUksus
+    class Ese : IUksus //наследует от IUksus
     {
-        int punktideArv;
+        int punktArv;
         string nimetus;
 
-        public Ese(string nimetus, int punktideArv) //Klassis peab olema kahe parameetriga konstruktor, mille abil saab määrata nimetuse ja punktide
+        public Ese(string nimetus, int punktArv) //Klassis peab olema kahe parameetriga konstruktor, mille abil saab määrata nimetuse ja punktide
         {
             this.nimetus = nimetus;
-            this.punktideArv = punktideArv;
+            this.punktArv = punktArv;
         }
-
         public int PunktideArv() //Meetod punktideArv tagastab punktide arvu.
         {
-            return punktideArv;
+            return punktArv;
         }
 
         public string info() //Meetod info tagastab selle eseme nimetuse.
