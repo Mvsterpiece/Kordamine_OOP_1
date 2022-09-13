@@ -8,10 +8,12 @@ namespace KontrolltooMang
 {
     abstract class Tegelane : IUksus //наследует от IUksus
     {
-        List<Ese> ;
+
+        List<Ese> eses = new List<Ese>(); //Klassis on privaatsed isendiväljad järgmise info jaoks: nimi (String) ja esemete nimekiri (List<Ese>).
 
 
-        string nimi;
+
+        
 
 
 
