@@ -3,3 +3,13 @@ C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\obj\
 C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\obj\Debug\net6.0\KontrolltooMang.AssemblyInfoInputs.cache
 C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\obj\Debug\net6.0\KontrolltooMang.AssemblyInfo.cs
 C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\obj\Debug\net6.0\KontrolltooMang.csproj.CoreCompileInputs.cache
+C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\bin\Debug\net6.0\KontrolltooMang.exe
+C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\bin\Debug\net6.0\KontrolltooMang.deps.json
+C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\bin\Debug\net6.0\KontrolltooMang.runtimeconfig.json
+C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\bin\Debug\net6.0\KontrolltooMang.dll
+C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\bin\Debug\net6.0\KontrolltooMang.pdb
+C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\obj\Debug\net6.0\KontrolltooMang.dll
+C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\obj\Debug\net6.0\refint\KontrolltooMang.dll
+C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\obj\Debug\net6.0\KontrolltooMang.pdb
+C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\obj\Debug\net6.0\KontrolltooMang.genruntimeconfig.cache
+C:\Users\opilane\source\repos\Saiko_TARpv21\KontrolltooMang\KontrolltooMang\obj\Debug\net6.0\ref\KontrolltooMang.dll
