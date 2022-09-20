@@ -1,0 +1,10 @@
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\bin\Debug\WindowsForms_TARpv21.exe.config
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\bin\Debug\WindowsForms_TARpv21.exe
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\bin\Debug\WindowsForms_TARpv21.pdb
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.csproj.AssemblyReference.cache
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.csproj.SuggestedBindingRedirects.cache
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.Properties.Resources.resources
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.csproj.GenerateResource.cache
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.csproj.CoreCompileInputs.cache
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.exe
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.pdb
