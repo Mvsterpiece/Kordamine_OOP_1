@@ -16,6 +16,7 @@ namespace WindowsForms_TARpv21
         TreeView puu;
         Button nupp;
         Label silt;
+        CheckBox aruut1, aruut2;
         public MinuOmaVorm()
         {
             Height = 600;
@@ -28,6 +29,9 @@ namespace WindowsForms_TARpv21
             oksad.Nodes.Add(new TreeNode("Nupp-Button"));
             oksad.Nodes.Add(new TreeNode("Silt-Label"));
             oksad.Nodes.Add(new TreeNode("Dialog aken - MessageBox"));
+            oksad.Nodes.Add(new TreeNode("Märkeruut - Checkbox"));
+
+
 
             puu.AfterSelect += Puu_AfterSelect;
 
@@ -77,7 +81,18 @@ namespace WindowsForms_TARpv21
                 }
                 else { }
             }
+            else if (e.Node.Text == "Märkeruut - Checkbox")
+            {
+                aruut1 = new CheckBox
+                {
+                    Checked=false,
+                    Text="Üks",
+                    Location= new Point(silt.Left+silt.Width,0)
+                };
 
+
+
+            }
         }
         private void Silt_MouseEnter(object sender, EventArgs e)
         {
