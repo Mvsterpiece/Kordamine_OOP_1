@@ -47,6 +47,13 @@ namespace WindowsForms_TARpv21
 
         private void Puu_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            silt = new Label
+            {
+                Text = "Minu esimene vorm",
+                Font = new Font("ArialBlack", 10),
+                Size = new Size(200, 50),
+                Location = new Point(450, 0)
+            };
             if (e.Node.Text == "Nupp-Button")
             {
                 nupp = new Button();
@@ -87,10 +94,18 @@ namespace WindowsForms_TARpv21
                 {
                     Checked=false,
                     Text="Üks",
-                    Location= new Point(silt.Left+silt.Width,0)
+                    Location= new Point(silt.Left+silt.Width,0),
+                    Height=25
                 };
-
-
+                aruut2 = new CheckBox
+                {
+                    Checked = false,
+                    Text = "Kaks",
+                    Location = new Point(silt.Left + silt.Width, aruut1.Height),
+                    Height = 25
+                };
+                this.Controls.Add(aruut1);
+                this.Controls.Add(aruut2);
 
             }
         }
