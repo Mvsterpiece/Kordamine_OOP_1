@@ -78,6 +78,7 @@ namespace WindowsForms_TARpv21
             }
             else if (e.Node.Text == "Dialog aken - MessageBox")
             {
+
                 MessageBox.Show("Aken", "kõige lihtne aken");
                 var vastus = MessageBox.Show("kas paneme aken kinni?","Valik",
                     MessageBoxButtons.YesNo,MessageBoxIcon.Question);
@@ -92,14 +93,14 @@ namespace WindowsForms_TARpv21
                 aruut1 = new CheckBox
                 {
                     Checked=false,
-                    Text="Üks",
+                    Text="TARpv21",
                     Location= new Point(silt.Left+silt.Width,0),
                     Height=25
                 };
                 aruut2 = new CheckBox
                 {
                     Checked = false,
-                    Text = "Kaks",
+                    Text = "LOGITpv21",
                     Location = new Point(silt.Left + silt.Width, aruut1.Height),
                     Height = 25
                 };
@@ -116,17 +117,20 @@ namespace WindowsForms_TARpv21
         {
             if (aruut1.Checked == true && aruut2.Checked == true)
             {
-
+                BackColor = Color.LightGreen;
             }
             else if (aruut1.Checked == true && aruut2.Checked == false)
             {
-
+                BackColor = Color.DarkMagenta;
             }
             else if(aruut1.Checked == false && aruut2.Checked == true)
             {
-
+                BackColor = Color.LightCyan;
             }
             else if(aruut1.Checked == false && aruut2.Checked == false)
+            {
+                BackColor = Color.DarkRed;
+            }
         }
 
 
