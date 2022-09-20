@@ -30,7 +30,6 @@ namespace WindowsForms_TARpv21
             oksad.Nodes.Add(new TreeNode("Silt-Label"));
             oksad.Nodes.Add(new TreeNode("Dialog aken - MessageBox"));
             oksad.Nodes.Add(new TreeNode("Märkeruut - Checkbox"));
-            oksad.Nodes.Add(new TreeNode("ProgressBar"));
 
 
             puu.AfterSelect += Puu_AfterSelect;
@@ -104,23 +103,33 @@ namespace WindowsForms_TARpv21
                     Location = new Point(silt.Left + silt.Width, aruut1.Height),
                     Height = 25
                 };
+                aruut2.CheckedChanged += Aruut_1_2_Changed;
+                aruut1.CheckedChanged += Aruut_1_2_Changed;
+
                 this.Controls.Add(aruut1);
                 this.Controls.Add(aruut2);
 
             }
-            else if (e.Node.Text == "ProgressBar")
-            {
-                ProgressBar pBar = new ProgressBar();
-                {
-                    pBar.Location = new System.Drawing.Point(20, 20);
-                    pBar.Name = "progressBar1";
-                    pBar.Width = 200;
-                    pBar.Height = 30;
-
-                }
-                Controls.Add(pBar);
-            }
         }
+
+        private void Aruut_1_2_Changed(object sender, EventArgs e)
+        {
+            if (aruut1.Checked == true && aruut2.Checked == true)
+            {
+
+            }
+            else if (aruut1.Checked == true && aruut2.Checked == false)
+            {
+
+            }
+            else if(aruut1.Checked == false && aruut2.Checked == true)
+            {
+
+            }
+            else if(aruut1.Checked == false && aruut2.Checked == false)
+        }
+
+
         private void Silt_MouseEnter(object sender, EventArgs e)
         {
             silt.ForeColor = Color.White;
