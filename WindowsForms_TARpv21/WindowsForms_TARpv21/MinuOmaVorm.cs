@@ -20,6 +20,8 @@ namespace WindowsForms_TARpv21
         CheckBox aruut1, aruut2;
         RadioButton rnupp1, rnupp2, rnupp3, rnupp4;
         PictureBox pilt;
+        ProgressBar rida;
+        Timer aeg;
         public MinuOmaVorm()
         {
             Height = 600;
@@ -34,6 +36,7 @@ namespace WindowsForms_TARpv21
             oksad.Nodes.Add(new TreeNode("Dialog aken - MessageBox"));
             oksad.Nodes.Add(new TreeNode("Märkeruut - Checkbox"));
             oksad.Nodes.Add(new TreeNode("Radionupp"));
+            oksad.Nodes.Add(new TreeNode("ProgressBar"));
 
             puu.AfterSelect += Puu_AfterSelect;
 
@@ -169,10 +172,36 @@ namespace WindowsForms_TARpv21
                 this.Controls.Add(rnupp3);
                 this.Controls.Add(rnupp4);
 
+            }
+            else if (e.Node.Text == "ProgressBar")
+            {
+                rida = new ProgressBar
+                {
+                    Width=400,
+                    Height=30,
+                    Location= new Point(300,450),
+                    Value=35,
+                    Minimum=0,
+                    Maximum=100,
+                    Step=1,
+                    //Dock=DockStyle.Bottom
+                };
+                aeg = new Timer();
+                aeg.Enabled = true;
+                aeg.Tick += Aeg_Tick;
+                this.Controls.Add(rida);
+
 
 
             }
         }
+
+        private void Aeg_Tick(object sender, EventArgs e)
+        {
+            rida.PerformStep();
+        }
+
+
 
         int x = 300;
         int y = 300;
@@ -188,19 +217,19 @@ namespace WindowsForms_TARpv21
             {
                 x -= 20;
                 pilt.Location = new Point(x, y);
-                rnupp1.Checked = false;
+                rnupp2.Checked = false;
             }
             if (rnupp3.Checked)
             {
                 y += 20;
                 pilt.Location = new Point(x, y);
-                rnupp1.Checked = false;
+                rnupp3.Checked = false;
             }
             if (rnupp4.Checked)
             {
                 y -= 20;
                 pilt.Location = new Point(x, y);
-                rnupp1.Checked = false;
+                rnupp4.Checked = false;
             }
         }
 
