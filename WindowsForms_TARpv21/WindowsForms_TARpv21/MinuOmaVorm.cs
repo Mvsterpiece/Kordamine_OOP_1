@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,8 @@ namespace WindowsForms_TARpv21
         Button nupp;
         Label silt;
         CheckBox aruut1, aruut2;
+        RadioButton rnupp1, rnupp2, rnupp3, rnupp4;
+        PictureBox pilt;
         public MinuOmaVorm()
         {
             Height = 600;
@@ -30,7 +33,7 @@ namespace WindowsForms_TARpv21
             oksad.Nodes.Add(new TreeNode("Silt-Label"));
             oksad.Nodes.Add(new TreeNode("Dialog aken - MessageBox"));
             oksad.Nodes.Add(new TreeNode("Märkeruut - Checkbox"));
-
+            oksad.Nodes.Add(new TreeNode("Radionupp"));
 
             puu.AfterSelect += Puu_AfterSelect;
 
@@ -51,7 +54,21 @@ namespace WindowsForms_TARpv21
                 Text = "Minu esimene vorm",
                 Font = new Font("ArialBlack", 10),
                 Size = new Size(200, 50),
-                Location = new Point(450, 0)
+                Location = new Point(150, 0)
+            };
+            aruut1 = new CheckBox
+            {
+                Checked = false,
+                Text = "TARpv21",
+                Location = new Point(silt.Left + silt.Width, 0),
+                Height = 25
+            };
+            aruut2 = new CheckBox
+            {
+                Checked = false,
+                Text = "LOGITpv21",
+                Location = new Point(silt.Left + silt.Width, aruut1.Height),
+                Height = 25
             };
             if (e.Node.Text == "Nupp-Button")
             {
@@ -68,7 +85,7 @@ namespace WindowsForms_TARpv21
                 silt = new Label
                 {
                     Text = "Minu esimene vorm",
-                    Font= new Font("ArialBlack",10),
+                    Font = new Font("ArialBlack", 10),
                     Size = new Size(200, 50),
                     Location = new Point(450, 0)
                 };
@@ -80,9 +97,9 @@ namespace WindowsForms_TARpv21
             {
 
                 MessageBox.Show("Aken", "kõige lihtne aken");
-                var vastus = MessageBox.Show("kas paneme aken kinni?","Valik",
-                    MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-                if(vastus==DialogResult.Yes)
+                var vastus = MessageBox.Show("kas paneme aken kinni?", "Valik",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (vastus == DialogResult.Yes)
                 {
                     this.Close();
                 }
@@ -92,10 +109,10 @@ namespace WindowsForms_TARpv21
             {
                 aruut1 = new CheckBox
                 {
-                    Checked=false,
-                    Text="TARpv21",
-                    Location= new Point(silt.Left+silt.Width,0),
-                    Height=25
+                    Checked = false,
+                    Text = "TARpv21",
+                    Location = new Point(silt.Left + silt.Width, 0),
+                    Height = 25
                 };
                 aruut2 = new CheckBox
                 {
@@ -111,7 +128,82 @@ namespace WindowsForms_TARpv21
                 this.Controls.Add(aruut2);
 
             }
+            else if (e.Node.Text == "Radionupp")
+            {
+                rnupp1 = new RadioButton
+                {
+                    Text = "Paremale",
+                    Width = 112,
+                    Location = new Point(aruut2.Left + aruut2.Width, aruut1.Height + aruut2.Height)
+                };
+                rnupp2 = new RadioButton
+                {
+                    Text = "Vasakule",
+                    Width = 112,
+                    Location = new Point(aruut2.Left + aruut2.Width+rnupp1.Width, aruut1.Height + aruut2.Height)
+                };
+                rnupp3 = new RadioButton
+                {
+                    Text = "Ülessa",
+                    Width = 112,
+                    Location = new Point(aruut2.Left + aruut2.Width+rnupp2.Width + rnupp1.Width, aruut1.Height + aruut2.Height)
+                };
+                rnupp4 = new RadioButton
+                {
+                    Text = "Alla",
+                    Width = 112,
+                    Location = new Point(aruut2.Left + aruut2.Width+rnupp3.Width+rnupp2.Width+rnupp1.Width, aruut1.Height + aruut2.Height)
+                };
+                pilt = new PictureBox
+                {
+                    Image=new Bitmap("b02.jpg"),
+                    Location = new Point(300,400),
+                    Size= new Size(100,200),
+                    SizeMode = PictureBoxSizeMode.Zoom
+
+                };
+
+                this.Controls.Add(pilt);
+                this.Controls.Add(rnupp1);
+                this.Controls.Add(rnupp2);
+                this.Controls.Add(rnupp3);
+                this.Controls.Add(rnupp4);
+
+
+
+            }
         }
+
+        int x = 300;
+        int y = 300;
+        private void Rnupud_Changed(object sender, EventArgs e)
+        {
+            if(rnupp1.Checked)
+            {
+                x += 20;
+                pilt.Location = new Point(x,y);
+                rnupp1.Checked = false;
+            }
+            if (rnupp2.Checked)
+            {
+                x -= 20;
+                pilt.Location = new Point(x, y);
+                rnupp1.Checked = false;
+            }
+            if (rnupp3.Checked)
+            {
+                y += 20;
+                pilt.Location = new Point(x, y);
+                rnupp1.Checked = false;
+            }
+            if (rnupp4.Checked)
+            {
+                y -= 20;
+                pilt.Location = new Point(x, y);
+                rnupp1.Checked = false;
+            }
+        }
+
 
         private void Aruut_1_2_Changed(object sender, EventArgs e)
         {

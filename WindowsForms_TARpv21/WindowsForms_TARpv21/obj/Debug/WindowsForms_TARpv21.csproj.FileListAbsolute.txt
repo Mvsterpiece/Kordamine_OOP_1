@@ -8,3 +8,4 @@ C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TA
 C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.csproj.CoreCompileInputs.cache
 C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.exe
 C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.pdb
+C:\Users\opilane\source\repos\Saiko_TARpv21\WindowsForms_TARpv21\WindowsForms_TARpv21\obj\Debug\WindowsForms_TARpv21.MinuOmaVorm.resources
