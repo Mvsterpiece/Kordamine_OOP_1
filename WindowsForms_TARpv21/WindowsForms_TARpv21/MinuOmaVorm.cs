@@ -22,6 +22,7 @@ namespace WindowsForms_TARpv21
         PictureBox pilt;
         ProgressBar rida;
         Timer aeg;
+        TextBox tekst;
         public MinuOmaVorm()
         {
             Height = 600;
@@ -37,6 +38,15 @@ namespace WindowsForms_TARpv21
             oksad.Nodes.Add(new TreeNode("Märkeruut - Checkbox"));
             oksad.Nodes.Add(new TreeNode("Radionupp"));
             oksad.Nodes.Add(new TreeNode("ProgressBar"));
+            oksad.Nodes.Add(new TreeNode("Tekstkast - Textbox"));
+            oksad.Nodes.Add(new TreeNode("MinuVorm"));
+            //puu.AfterSelect += Puu_AfterSelect;
+            //puu.Nodes.Add(oksad);
+            //puu.DoubleClick += Tekst_DoubleClick;
+
+
+
+
 
             puu.AfterSelect += Puu_AfterSelect;
 
@@ -195,6 +205,37 @@ namespace WindowsForms_TARpv21
                 aeg.Tick += Aeg_Tick;
                 this.Controls.Add(rida);
 
+            }
+            else if (e.Node.Text == "Tekstkast - Textbox")
+            {
+                tekst = new TextBox
+                {
+                    Font = new Font("ArialBlack", 34,FontStyle.Italic),
+                    Location = new Point(350, 400),
+                    Enabled = false,
+                };
+
+                //tekst.MouseDoubleClick += Tekst_DoubleClick;
+                this.Controls.Add(tekst);
+            }
+            else if (e.Node.Text=="MinuVorm")
+            {
+                MinuVorm minu = new MinuVorm("Kuulame muusikat", "Vajuta siia", "Faili nimi");
+                minu.ShowDialog();
+
+
+            }
+        }
+
+        private void Tekst_DoubleClick(object sender, EventArgs e)
+        {
+            if (tekst.Enabled)
+            {
+                tekst.Enabled = false;
+            }
+            else
+            {
+                tekst.Enabled = true;
             }
         }
 
