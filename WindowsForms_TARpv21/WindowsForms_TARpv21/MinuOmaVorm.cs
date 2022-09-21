@@ -147,13 +147,13 @@ namespace WindowsForms_TARpv21
                 };
                 rnupp3 = new RadioButton
                 {
-                    Text = "Ülessa",
+                    Text = "Alla",
                     Width = 112,
                     Location = new Point(aruut2.Left + aruut2.Width+rnupp2.Width + rnupp1.Width, aruut1.Height + aruut2.Height)
                 };
                 rnupp4 = new RadioButton
                 {
-                    Text = "Alla",
+                    Text = "Üles",
                     Width = 112,
                     Location = new Point(aruut2.Left + aruut2.Width+rnupp3.Width+rnupp2.Width+rnupp1.Width, aruut1.Height + aruut2.Height)
                 };
@@ -165,6 +165,10 @@ namespace WindowsForms_TARpv21
                     SizeMode = PictureBoxSizeMode.Zoom
 
                 };
+                rnupp1.CheckedChanged += new EventHandler(Rnupud_Changed);
+                rnupp2.CheckedChanged += new EventHandler(Rnupud_Changed);
+                rnupp3.CheckedChanged += new EventHandler(Rnupud_Changed);
+                rnupp4.CheckedChanged += new EventHandler(Rnupud_Changed);
 
                 this.Controls.Add(pilt);
                 this.Controls.Add(rnupp1);
@@ -191,14 +195,13 @@ namespace WindowsForms_TARpv21
                 aeg.Tick += Aeg_Tick;
                 this.Controls.Add(rida);
 
-
-
             }
         }
 
         private void Aeg_Tick(object sender, EventArgs e)
         {
             rida.PerformStep();
+            MessageBox.Show("So stupid", "SEEE on VIRUS");
         }
 
 
