@@ -222,7 +222,6 @@ namespace WindowsForms_TARpv21
             {
                 MinuVorm minu = new MinuVorm("Kuulame muusikat", "Vajuta siia", "Konfuz - Кайф Ты Поймала");
                 minu.ShowDialog();
-
             }
         }
 
