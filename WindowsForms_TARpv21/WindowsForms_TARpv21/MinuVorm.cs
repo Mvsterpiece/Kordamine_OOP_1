@@ -41,9 +41,17 @@ namespace WindowsForms_TARpv21
         {
             Button nupp_sender = (Button)sender;
             var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus",MessageBoxButtons.YesNo);
+            var vastus1 = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
             if (vastus == DialogResult.Yes)
             {
                 using (var muusika = new SoundPlayer(@"..\..\konfuz.wav"))
+                {
+                    muusika.Play();
+                }
+            }
+            else if (vastus1 == DialogResult.Yes)
+            {
+                using (var muusika = new SoundPlayer(@"..\..\armenia.wav"))
                 {
                     muusika.Play();
                 }
