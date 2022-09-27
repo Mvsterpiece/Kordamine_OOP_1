@@ -69,7 +69,7 @@ namespace WindowsForms_TARpv21
             };
             Label praegune = new Label
             {
-                Text = String.Format("Praegu mängib."),
+                Text = String.Format(" "),
                 Location = new System.Drawing.Point(450, 50),
                 Size = new System.Drawing.Size(100, 50),
                 BackColor = System.Drawing.Color.White,
