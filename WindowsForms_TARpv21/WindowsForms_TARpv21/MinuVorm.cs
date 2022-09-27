@@ -53,7 +53,7 @@ namespace WindowsForms_TARpv21
             };
             Label failisnimi1 = new Label
             {
-                Text = String.Format("Bib"),
+                Text = String.Format("Ашот труба шатал"),
                 Location = new System.Drawing.Point(250, 60),
                 Size = new System.Drawing.Size(100, 50),
                 BackColor = System.Drawing.Color.White,
@@ -61,7 +61,7 @@ namespace WindowsForms_TARpv21
             };
             Label failisnimi2 = new Label
             {
-                Text = String.Format("Bib"),
+                Text = String.Format("Retro - Modern Talking - Chery, Chery Lady"),
                 Location = new System.Drawing.Point(250, 110),
                 Size = new System.Drawing.Size(100, 50),
                 BackColor = System.Drawing.Color.White,
@@ -102,7 +102,7 @@ namespace WindowsForms_TARpv21
             var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
             if (vastus == DialogResult.Yes)
             {
-                using (var muusika = new SoundPlayer(@"..\..\konfuz.wav"))
+                using (var muusika = new SoundPlayer(@"..\..\ashot.wav"))
                 {
                     muusika.Play();
                 }
@@ -120,7 +120,7 @@ namespace WindowsForms_TARpv21
             var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
             if (vastus == DialogResult.Yes)
             {
-                using (var muusika = new SoundPlayer(@"..\..\konfuz.wav"))
+                using (var muusika = new SoundPlayer(@"..\..\Retro-Modern-Talking-Chery_-Chery-Lady.wav"))
                 {
                     muusika.Play();
                 }
