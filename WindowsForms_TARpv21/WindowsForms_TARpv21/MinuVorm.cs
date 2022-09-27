@@ -67,12 +67,21 @@ namespace WindowsForms_TARpv21
                 BackColor = System.Drawing.Color.White,
 
             };
+            Label praegune = new Label
+            {
+                Text = String.Format("Praegu mängib."),
+                Location = new System.Drawing.Point(450, 50),
+                Size = new System.Drawing.Size(100, 50),
+                BackColor = System.Drawing.Color.White,
+
+            };
             this.Controls.Add(nupp);
             this.Controls.Add(failisnimi);
             this.Controls.Add(nupp1);
             this.Controls.Add(failisnimi1);
             this.Controls.Add(nupp2);
             this.Controls.Add(failisnimi2);
+            this.Controls.Add(praegune);
         }
 
 
