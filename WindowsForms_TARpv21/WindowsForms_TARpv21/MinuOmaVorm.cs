@@ -220,9 +220,8 @@ namespace WindowsForms_TARpv21
             }
             else if (e.Node.Text=="MinuVorm")
             {
-                MinuVorm nupp = new MinuVorm("Kuulame muusikat", "Vajuta siia", "Konfuz - Кайф Ты Поймала");
-                nupp.ShowDialog();
-
+                    MinuVorm nupp = new MinuVorm("Kuulame muusikat");
+                    nupp.ShowDialog();
             }
         }
 

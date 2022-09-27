@@ -13,13 +13,13 @@ namespace WindowsForms_TARpv21
 
         public MinuVorm() { }
 
-        public MinuVorm(string Pealkiri, string Nupp, string Fail)
+        public MinuVorm(string Pealkiri)
         {
             this.ClientSize = new System.Drawing.Size(600, 300);
             this.Text = Pealkiri;
             Button nupp = new Button
             {
-                Text = Nupp,
+                Text = String.Format("Vajuta"),
                 Location = new System.Drawing.Point(150, 0),
                 Size = new System.Drawing.Size(100,50),
                 BackColor = System.Drawing.Color.White,
@@ -28,24 +28,24 @@ namespace WindowsForms_TARpv21
 
             Button nupp1 = new Button
             {
-                Text = Nupp,
+                Text = String.Format("Vajuta"),
                 Location = new System.Drawing.Point(150, 50),
                 Size = new System.Drawing.Size(100, 50),
                 BackColor = System.Drawing.Color.White,
             };
-            nupp1.Click += Nupp_Click;
+            nupp1.Click += Nupp_Click1;
             Button nupp2 = new Button
             {
-                Text = Nupp,
+                Text = String.Format("Vajuta"),
                 Location = new System.Drawing.Point(150, 100),
                 Size = new System.Drawing.Size(100, 50),
                 BackColor = System.Drawing.Color.White,
             };
-            nupp2.Click += Nupp_Click;
+            nupp2.Click += Nupp_Click2;
 
             Label failisnimi = new Label
             {
-                Text = Fail,
+                Text = String.Format("Konfuz - Кайф ты поймала"),
                 Location = new System.Drawing.Point(250, 10),
                 Size = new System.Drawing.Size(100, 50),
                 BackColor = System.Drawing.Color.White,
@@ -53,7 +53,7 @@ namespace WindowsForms_TARpv21
             };
             Label failisnimi1 = new Label
             {
-                Text = Fail,
+                Text = String.Format("Bib"),
                 Location = new System.Drawing.Point(250, 60),
                 Size = new System.Drawing.Size(100, 50),
                 BackColor = System.Drawing.Color.White,
@@ -61,7 +61,7 @@ namespace WindowsForms_TARpv21
             };
             Label failisnimi2 = new Label
             {
-                Text = Fail,
+                Text = String.Format("Bib"),
                 Location = new System.Drawing.Point(250, 110),
                 Size = new System.Drawing.Size(100, 50),
                 BackColor = System.Drawing.Color.White,
@@ -81,10 +81,10 @@ namespace WindowsForms_TARpv21
             var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus",MessageBoxButtons.YesNo);
             if (vastus == DialogResult.Yes)
             {
-                //using (var muusika = new SoundPlayer(@"..\..\konfuz.wav"))
-                //{
-                //    muusika.Play();
-                //}
+                using (var muusika = new SoundPlayer(@"..\..\konfuz.wav"))
+                {
+                    muusika.Play();
+                }
             }
             else
             {
@@ -92,5 +92,45 @@ namespace WindowsForms_TARpv21
             }
             this.Controls.Add(nupp_sender);
             }
+
+
+
+
+        private void Nupp_Click1(object sender, EventArgs e)
+        {
+            Button nupp_sender = (Button)sender;
+            var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
+            if (vastus == DialogResult.Yes)
+            {
+                using (var muusika = new SoundPlayer(@"..\..\konfuz.wav"))
+                {
+                    muusika.Play();
+                }
+            }
+            else
+            {
+                MessageBox.Show(":(");
+            }
+            this.Controls.Add(nupp_sender);
+        }
+
+        private void Nupp_Click2(object sender, EventArgs e)
+        {
+            Button nupp_sender = (Button)sender;
+            var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
+            if (vastus == DialogResult.Yes)
+            {
+                using (var muusika = new SoundPlayer(@"..\..\konfuz.wav"))
+                {
+                    muusika.Play();
+                }
+            }
+            else
+            {
+                MessageBox.Show(":(");
+            }
+            this.Controls.Add(nupp_sender);
+        }
+
     }
 }
