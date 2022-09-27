@@ -75,6 +75,8 @@ namespace WindowsForms_TARpv21
             this.Controls.Add(failisnimi2);
         }
 
+
+
             private void Nupp_Click(object sender, EventArgs e)
             {
             Button nupp_sender = (Button)sender;
@@ -92,45 +94,39 @@ namespace WindowsForms_TARpv21
             }
             this.Controls.Add(nupp_sender);
             }
-
-
-
-
-        private void Nupp_Click1(object sender, EventArgs e)
-        {
-            Button nupp_sender = (Button)sender;
-            var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
-            if (vastus == DialogResult.Yes)
+            private void Nupp_Click1(object sender, EventArgs e)
             {
-                using (var muusika = new SoundPlayer(@"..\..\ashot.wav"))
+                Button nupp_sender = (Button)sender;
+                var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
+                if (vastus == DialogResult.Yes)
                 {
-                    muusika.Play();
+                    using (var muusika = new SoundPlayer(@"..\..\ashot.wav"))
+                    {
+                        muusika.Play();
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show(":(");
-            }
-            this.Controls.Add(nupp_sender);
-        }
-
-        private void Nupp_Click2(object sender, EventArgs e)
-        {
-            Button nupp_sender = (Button)sender;
-            var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
-            if (vastus == DialogResult.Yes)
-            {
-                using (var muusika = new SoundPlayer(@"..\..\Retro-Modern-Talking-Chery_-Chery-Lady.wav"))
+                else
                 {
-                    muusika.Play();
+                    MessageBox.Show(":(");
                 }
+                this.Controls.Add(nupp_sender);
             }
-            else
+            private void Nupp_Click2(object sender, EventArgs e)
             {
-                MessageBox.Show(":(");
+                Button nupp_sender = (Button)sender;
+                var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
+                if (vastus == DialogResult.Yes)
+                {
+                    using (var muusika = new SoundPlayer(@"..\..\Retro-Modern-Talking-Chery_-Chery-Lady.wav"))
+                    {
+                        muusika.Play();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(":(");
+                }
+                this.Controls.Add(nupp_sender);
             }
-            this.Controls.Add(nupp_sender);
-        }
-
     }
 }
