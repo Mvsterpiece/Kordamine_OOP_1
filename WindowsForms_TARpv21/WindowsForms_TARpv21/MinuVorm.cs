@@ -106,12 +106,13 @@ namespace WindowsForms_TARpv21
             private void Nupp_Click1(object sender, EventArgs e)
             {
                 Button nupp_sender = (Button)sender;
-                var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
-                if (vastus == DialogResult.Yes)
+                var vastus1 = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
+                if (vastus1 == DialogResult.Yes)
                 {
-                    using (var muusika = new SoundPlayer(@"..\..\ashot.wav"))
+                    using (var muusika1 = new SoundPlayer(@"..\..\ashot.wav"))
                     {
-                        muusika.Play();
+                        muusika1.Play();
+
                     }
                 }
                 else
@@ -123,12 +124,12 @@ namespace WindowsForms_TARpv21
             private void Nupp_Click2(object sender, EventArgs e)
             {
                 Button nupp_sender = (Button)sender;
-                var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
-                if (vastus == DialogResult.Yes)
+                var vastus2 = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
+                if (vastus2 == DialogResult.Yes)
                 {
-                    using (var muusika = new SoundPlayer(@"..\..\Retro-Modern-Talking-Chery_-Chery-Lady.wav"))
+                    using (var muusika2 = new SoundPlayer(@"..\..\Retro-Modern-Talking-Chery_-Chery-Lady.wav"))
                     {
-                        muusika.Play();
+                        muusika2.Play();
                     }
                 }
                 else
