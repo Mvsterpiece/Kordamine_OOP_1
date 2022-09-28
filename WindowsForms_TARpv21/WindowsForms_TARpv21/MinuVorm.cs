@@ -95,6 +95,7 @@ namespace WindowsForms_TARpv21
                 using (var muusika = new SoundPlayer(@"..\..\konfuz.wav"))
                 {
                     muusika.Play();
+                    MessageBox.Show("Mängib muusika - Konfuz - Кайф ты поймала");
                 }
             }
             else
@@ -106,12 +107,13 @@ namespace WindowsForms_TARpv21
             private void Nupp_Click1(object sender, EventArgs e)
             {
                 Button nupp_sender = (Button)sender;
-                var vastus1 = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
-                if (vastus1 == DialogResult.Yes)
+                var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
+                if (vastus == DialogResult.Yes)
                 {
-                    using (var muusika1 = new SoundPlayer(@"..\..\ashot.wav"))
+                    using (var muusika = new SoundPlayer(@"..\..\ashot.wav"))
                     {
-                        muusika1.Play();
+                        muusika.Play();
+                        MessageBox.Show("Mängib muusika - Ашот труба шатал");
 
                     }
                 }
@@ -124,12 +126,13 @@ namespace WindowsForms_TARpv21
             private void Nupp_Click2(object sender, EventArgs e)
             {
                 Button nupp_sender = (Button)sender;
-                var vastus2 = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
-                if (vastus2 == DialogResult.Yes)
+                var vastus = MessageBox.Show("Kas tahad muusikat kuulata?", "Küsimus", MessageBoxButtons.YesNo);
+                if (vastus == DialogResult.Yes)
                 {
-                    using (var muusika2 = new SoundPlayer(@"..\..\Retro-Modern-Talking-Chery_-Chery-Lady.wav"))
+                    using (var muusika = new SoundPlayer(@"..\..\Retro-Modern-Talking-Chery_-Chery-Lady.wav"))
                     {
-                        muusika2.Play();
+                        muusika.Play();
+                        MessageBox.Show("Mängib muusika - Retro-Modern-Talking-Chery_-Chery-Lady");
                     }
                 }
                 else
